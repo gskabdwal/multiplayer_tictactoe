@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: flutter pub get flutter build web
+      - run: flutter pub get && flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MULTIPLAYER_TTT }}
-          projectId: multiplayer-ttt
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MP_TTT_A8211 }}
+          projectId: mp-ttt-a8211

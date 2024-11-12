@@ -16,7 +16,7 @@ jobs:
 
       - name: Set up Flutter
         uses: flutter/setup-flutter@v2
-          with:
+        with:
             flutter-version: '2.16.2'
 
       - name: Install dependencies

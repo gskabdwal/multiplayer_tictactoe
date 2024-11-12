@@ -23,6 +23,8 @@ class MainMenuScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Multiplayer Tic-Tac-Toe", style:TextStyle(fontSize:35, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 50),
             CustomButton(
               onTap: () => createRoom(context),
               text: 'Create Room',

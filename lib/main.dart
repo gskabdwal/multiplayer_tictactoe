@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       create: (context) => RoomDataProvider(),
       child: MaterialApp(
         title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: bgColor,
         ),

@@ -1,4 +1,3 @@
-
 name: Deploy to Firebase Hosting on Push
 
 on:
@@ -17,7 +16,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-            flutter-version: '3.7.10'
+          flutter-version: '3.7.10'
 
       - name: Install dependencies
         run: flutter pub get
@@ -25,8 +24,15 @@ jobs:
       - name: Build web
         run: flutter build web
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Set the Node.js version to use with Firebase CLI
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
       - name: Deploy to Firebase Hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MP_TTT_A8211 }}
-        run: |
-          firebase deploy --only hosting --project mp-ttt-a8211
+        run: firebase deploy --only hosting --project mp-ttt-a8211

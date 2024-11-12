@@ -24,7 +24,7 @@ class MainMenuScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Padding(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(15),
                 child: Text("Multiplayer Tic-Tac-Toe",
                     textAlign: TextAlign.center,
                     style: TextStyle(

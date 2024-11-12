@@ -1,16 +1,12 @@
 {
   "hosting": {
+    "site": "mp-ttt-a8211",
     "public": "build/web",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
+
